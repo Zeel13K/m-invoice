@@ -4,6 +4,12 @@ import { format } from 'date-fns';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { useRef } from 'react';
+import Cmyktop from '/src/assets/Cmyktop.png';
+import Members from '/src/assets/members.png';
+import MavtarLogoTop from '/src/assets/mavtarlogotop.png';
+import Address from '/src/assets/Address.png';
+import BTT from '/src/assets/BTt.png';
+import QRCode from '/src/assets/QR_Code.png';
 
 const InvoicePDF = () => {
   const location = useLocation();
@@ -70,17 +76,17 @@ const InvoicePDF = () => {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',padding: '30px' }}>
             {/* Logo on left side */}
             <div>
-              <img src="/src/assets/Cmyktop.png" alt="Logo" style={{ width: '350px' }} />
+              <img src={Cmyktop} alt="Logo" style={{ width: '350px' }} />
             </div>
 
             {/* Members on right side */}
             <div className="members">
-              <img src="/src/assets/members.png" alt="Members" style={{ width: '350px' }} />
+              <img src={Members} alt="Members" style={{ width: '350px' }} />
             </div>
           </div>
 
           <div style={{ textAlign: 'center' }}>
-            <img src="/src/assets/mavtarlogotop.png" alt="Mavtar Printing Press Logo" style={{ width: '780px',marginTop: '5px' }} />
+            <img src={MavtarLogoTop} alt="Mavtar Printing Press Logo" style={{ width: '780px',marginTop: '5px' }} />
           </div>
         </header>
       </div>
@@ -93,7 +99,7 @@ const InvoicePDF = () => {
       >
       </div>
         <div style={{ textAlign: 'center' }}>
-          <img src="/src/assets/Address.png" alt="Address" style={{ width: '90%' }} />
+          <img src={Address} alt="Address" style={{ width: '90%' }} />
         </div>
       <div
         style={{
@@ -243,7 +249,7 @@ const InvoicePDF = () => {
         marginTop: 'auto'
       }}>
         <img 
-          src="/src/assets/BTt.png"
+          src={BTT}
           alt="BT Logo" 
           style={{
             height: '9.7rem',
@@ -251,7 +257,7 @@ const InvoicePDF = () => {
           }}
         />
         <img
-          src="/src/assets/QR_Code.png"
+          src={QRCode}
           alt="QR Code"
           style={{
             height: '9.5rem',
