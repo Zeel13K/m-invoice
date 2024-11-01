@@ -1,0 +1,95 @@
+.pdf-container {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3.5px solid black;
+    border-bottom: 15px solid #000080;
+}
+  
+  .pdf-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    
+  }
+  
+  .pdf-header {
+    margin-bottom: 2rem;
+  }
+  
+  .pdf-main {
+    flex: 1;
+  }
+  
+  .invoice-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .invoice-items table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .invoice-items th,
+  .invoice-items td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .invoice-items th {
+    background-color: #f5f5f5;
+  }
+  
+  .invoice-summary {
+    margin-left: auto;
+    width: 300px;
+  }
+  
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .summary-item.total {
+    font-weight: bold;
+    border-top: 2px solid #000;
+    border-bottom: none;
+  }
+  
+  .pdf-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .download-button-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .download-btn {
+    background-color: #000080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .download-btn:hover {
+    background-color: #000066;
+  }
+ 
