@@ -228,7 +228,7 @@ const InvoicePDF = () => {
           <div style={{ flex: '0.5', textAlign: 'center', padding: '8px', borderLeft: '3px solid #000080', fontWeight: 'normal', fontSize: '18px',borderBottom: '2px solid #000080' }}></div>
           <div style={{ flex: '0.5', textAlign: 'center', padding: '8px', borderLeft: '3px solid #000080', fontWeight: 'normal', fontSize: '18px',borderBottom: '2px solid #000080' }}></div>
           <div style={{ flex: '0.8', textAlign: 'center', padding: '8px', borderLeft: '3px solid #000080', fontWeight: 'bold', fontSize: '20px', fontFamily: 'Arial, sans-serif', borderBottom: '2px solid #000080' }}>
-            {formData.items.reduce((sum, item) => sum + (parseFloat(item.amount) || 0), 0).toFixed(2)}/-
+          {Math.floor(formData.items.reduce((sum, item) => sum + (parseFloat(item.amount) || 0), 0))}/-
                   {/* {(() => {
               const subtotal = formData.items.reduce((sum, item) => sum + (parseFloat(item.amount) || 0), 0);
               const gst = subtotal * 0.18; // 18% GST
