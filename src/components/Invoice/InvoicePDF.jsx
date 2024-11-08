@@ -126,7 +126,7 @@ const InvoicePDF = () => {
         <div style={{ flex: 1 }}>
           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
             <label style={{ width: '80px', fontWeight: 'bold',fontSize: '19px' }}>Bill No</label>
-            <span style={{ flex: 1, padding: '5px',fontWeight: 'lighter', fontSize: '22px' }}>{formData.billNo}</span>
+            <span style={{ flex: 1, padding: '5px',fontWeight: 'bold', fontSize: '22px' }}>{formData.billNo}</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <label style={{ width: '80px', fontWeight: 'bold',fontSize: '19px' }}>Date.</label>
@@ -155,8 +155,9 @@ const InvoicePDF = () => {
           marginTop: '1.2rem',
           fontWeight: 'bold', 
           fontSize: '20px',
-          fontFamily: 'Arial, sans-serif'
+          fontFamily: 'Varela Round, Arial, sans-serif' 
         }}>
+
           <div style={{ flex: '0.3', textAlign: 'center', padding: '8px', fontWeight: 'bold', fontSize:'4xl' }}>
             SL.
           </div>
@@ -182,7 +183,7 @@ const InvoicePDF = () => {
             <div style={{ flex: '0.3', textAlign: 'center', padding: '8px', fontWeight: 'normal', fontSize: '28px', fontFamily: 'Arial, sans-serif', position: 'relative', zIndex: 2 }}>
               {(item.description || item.qty || item.price || item.amount) ? index + 1 : ''}
             </div>
-            <div style={{ flex: '2', padding: '8px', borderLeft: '3.5px solid #000080', fontWeight: 'normal' , fontSize: '28px' , textAlign: 'center', position: 'relative', zIndex: 2 }}>
+            <div style={{ flex: '2', padding: '8px', borderLeft: '3.5px solid #000080', fontWeight: 'normal' , fontSize: '28px', position: 'relative', zIndex: 2 }}>
               {item.description}
             </div>
             <div style={{ flex: '0.5', textAlign: 'center', padding: '8px', borderLeft: '3px solid #000080',  fontWeight: 'normal' , fontSize: '28px', position: 'relative', zIndex: 2 }}>

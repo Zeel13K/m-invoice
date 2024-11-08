@@ -6,6 +6,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 3.5px solid black;
     border-bottom: 15px solid #000080;
+    font-family: 'Nunito', Arial, sans-serif;
 }
   
   .pdf-content {
