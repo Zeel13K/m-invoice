@@ -9,7 +9,7 @@ import Members from '/src/assets/members.png';
 import MavtarLogoTop from '/src/assets/mavtarlogotop.png';
 import Address from '/src/assets/Address.png';
 import BTT from '/src/assets/BTt.png';
-import QRCode from '/src/assets/QR_Code.png';
+import QrCode from '/src/assets/QR_CODE.jpg';
 
 const InvoicePDF = () => {
   const location = useLocation();
@@ -113,7 +113,7 @@ const InvoicePDF = () => {
         <div style={{ flex: 2 }}>
           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
             <label style={{ width: '80px', fontWeight: 'bold', fontSize: '19px'}}>M/s.</label>
-            <span style={{ flex: 1, padding: '5px', fontWeight: 'bold', fontSize: '26px', textTransform: 'uppercase' }}>{formData.ms}</span>
+            <span style={{ flex: 1, padding: '5px', fontWeight: 'bold', fontSize: '24px'}}>{formData.ms}</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <label style={{ width: '80px', fontWeight: 'bold', fontSize: '19px' }}>Mobile No.</label>
@@ -256,10 +256,10 @@ const InvoicePDF = () => {
           }}
         />
         <img
-          src={QRCode}
+          src={QrCode}
           alt="QR Code"
           style={{
-            height: '9.5rem',
+            height: '17.75rem',
           }}
         />
       </div>
