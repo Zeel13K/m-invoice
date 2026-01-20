@@ -17,23 +17,36 @@ const InvoicePDF = () => {
 
   const pdfRef = useRef(); 
 
- const downloadPdf = () =>{
+ const downloadPdf = () => {
     const input = pdfRef.current;
-    html2canvas(input).then( (canvas)=>{
+    
+    // Use fixed scale for consistent rendering across all screen sizes
+    html2canvas(input, {
+      scale: 2, // Fixed scale for high-quality output
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: '#ffffff',
+      windowWidth: 816, // A4 width in pixels at 96 DPI (8.5 inches)
+      windowHeight: 1056, // A4 height in pixels at 96 DPI (11 inches)
+      scrollX: 0,
+      scrollY: 0,
+    }).then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p','mm','a4',true);
+      const pdf = new jsPDF('p', 'mm', 'a4', true);
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = pdf.internal.pageSize.getHeight();
       const imgWidth = canvas.width;
       const imgHeight = canvas.height;
-      const ratio = Math.min(pdfWidth / imgWidth , pdfHeight / imgHeight);
+      
+      // Calculate ratio to fit the image within A4 while maintaining aspect ratio
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
       const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = 1;
-      pdf.addImage(imgData,'PNG',imgX,imgY,imgWidth*ratio,imgHeight*ratio);
-      pdf.save('invoice.pdf')
-
-    } )
- }
+      const imgY = 0; // No margin at top
+      
+      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+      pdf.save('invoice.pdf');
+    });
+  }
 
   return (
     <>

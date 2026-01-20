@@ -1,12 +1,13 @@
 .pdf-container {
-    width: 8.5in;
-    min-height: 11in;
+    width: 816px; /* 8.5in at 96 DPI for consistent rendering */
+    min-height: 1056px; /* 11in at 96 DPI */
     margin: 0 auto;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 3.5px solid black;
     border-bottom: 15px solid #000080;
     font-family: 'Nunito', Arial, sans-serif;
+    overflow: hidden; /* Prevent content overflow */
 }
   
   .pdf-content {
